@@ -2,7 +2,11 @@
 import { css } from "@emotion/react";
 import ClearIcon from '@mui/icons-material/Clear';
 
-export const MyButton = ({setValue}:any) => {
+interface Props{
+  setValue:(strin:string)=> void
+}
+
+export const MyButton = ({setValue}:Props) => {
   return (
     <button
     onClick={()=> setValue("")}

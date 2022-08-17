@@ -43,7 +43,7 @@ function App() {
 
   return (
 
-        <Users setSuccess={setSuccess} usersCount={invites.length}>
+        <Users setSuccess={setSuccess} >
         <TextField fullWidth label="Найти пользователя"
         value={value}
         margin="dense"

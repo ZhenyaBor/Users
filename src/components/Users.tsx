@@ -2,8 +2,12 @@
 import { css } from "@emotion/react";
 import Button from '@mui/material/Button';
 
+interface Props{
+  children:any
+  setSuccess:(boolean:boolean)=> void
+}
 
-export const Users = ({children,setSuccess}:any )=> {
+export const Users = ({children,setSuccess}:Props )=> {
 
   const onClickButton = ()=>{
     setSuccess(true)
