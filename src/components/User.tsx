@@ -62,6 +62,7 @@ export const User = ({users ,isLoading, value, onClickInvite, isInvited }: IUser
                   onClick={()=> onClickInvite(user.id)}
                    css={css`
                   background-color:transparent;
+                  cursor: pointer;
                       `}
                 >{isInvited.includes(user.id)?<RemoveIcon/>:<AddIcon/>}</button>
                 </div>
