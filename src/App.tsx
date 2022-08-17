@@ -3,6 +3,7 @@ import axios from "axios";
 import { User, Users, AlertPopup } from './components';
 import { TextField } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
+import {MyButton} from './UI/MyButton';
 
 interface IUsers{
   id:never
@@ -47,7 +48,7 @@ function App() {
         value={value}
         margin="dense"
         onChange={onChangeSerchValue}
-        InputProps={{endAdornment: <SearchIcon/>}}
+        InputProps={{endAdornment:value?  <MyButton  setValue={setValue}/> : <SearchIcon/>}}
         /> 
         {success ?invites.length>0 && <AlertPopup success={success} usersCount={invites.length}/>:''}
         <User users={users} isLoading={isLoading} value={value} onClickInvite ={onClickInvite} isInvited={invites}/>
