@@ -1,4 +1,4 @@
-import {useState,useEffect} from 'react';
+import {useState,useEffect, ChangeEvent} from 'react';
 import axios from "axios";
 import { User, Users, AlertPopup } from './components';
 import { TextField } from '@mui/material';
@@ -29,7 +29,7 @@ function App() {
     setIsLoading(false)
   },[])
   
-  const onChangeSerchValue = (e:any)=>{
+  const onChangeSerchValue = (e:ChangeEvent<HTMLInputElement>)=>{
     setValue(e.target.value)
   }
 

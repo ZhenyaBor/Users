@@ -24,7 +24,8 @@ export const User = ({users ,isLoading, value, onClickInvite, isInvited }: IUser
 
   return (
     <>
-    {!isLoading? users.filter((item)=>{return item.first_name.toLowerCase().includes(value)||
+    {!isLoading? users
+    .filter((item)=>{return item.first_name.toLowerCase().includes(value)||
     item.email.toLowerCase().includes(value)||
     item.last_name.toLowerCase().includes(value)})
     .map((user)=>{
